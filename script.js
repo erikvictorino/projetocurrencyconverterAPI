@@ -4,7 +4,7 @@ const apiURL = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/`;
 // Função para consulta de câmbio API
 async function getExchangeRate(daMoeda, paraMoeda) {
     try{
-        const response = await fetch(`${apiURL} ${daMoeda}`);
+        const response = await fetch(`${apiURL}${daMoeda}`);
         const data     = await response.json();
 
         if (data.result === "success"){
